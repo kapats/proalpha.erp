@@ -1,0 +1,11 @@
+---
+# tasks file for example_role
+- name: Write content to a file
+  example_module:
+    path: C:\file.txt
+    content: "This is a new content"
+  register: example_output
+
+- name: Show the output
+  debug:
+    msg: "The message from custom module is: {{ example_output }}"
